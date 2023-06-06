@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".fragments.RegistrationFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:context=".fragments.RegistrationFragment">
+            <TextView
+                android:id="@+id/text_view_userid_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text="Mobile:"/>
+
+            <TextView
+                android:id="@+id/edit_text_userid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:hint="Enter Mobile Number"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_view_name_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:context=".fragments.RegistrationFragment">
+
+            <EditText
+                android:id="@+id/edit_text_fname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="First Name"/>
+
+            <EditText
+                android:id="@+id/edit_text_mname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Middle Name"/>
+
+            <EditText
+                android:id="@+id/edit_text_lname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Last Name"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_view_address_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address"/>
+
+        <EditText
+            android:id="@+id/edit_text_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Address"/>
+        <TextView
+            android:id="@+id/text_view_occupation_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Occupation"/>
+
+        <EditText
+            android:id="@+id/edit_text_occupation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Occupation"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:context=".fragments.RegistrationFragment"
+        android:paddingBottom="15dp">
+        <TextView
+            android:id="@+id/text_view_city_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="City:"/>
+
+        <Spinner
+            android:id="@+id/spinner_city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:prompt="@string/city_prompt"
+            android:entries="@array/cities"
+            android:layout_weight="0.2"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:context=".fragments.RegistrationFragment">
+        <TextView
+            android:id="@+id/text_view_pan_number_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Pan Number:"
+            android:layout_weight="0.2"/>
+
+    <EditText
+        android:id="@+id/edit_text_pan_no"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="PAN Number"
+        android:maxLength="10"
+        android:layout_weight="0.2"/>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:context=".fragments.RegistrationFragment">
+            <Button
+                android:id="@+id/choose_image_button_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Choose File"
+                android:layout_weight="0.15"/>
+            <ImageView
+                android:id="@+id/image_view_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:adjustViewBounds="true"
+                android:maxWidth="100dp"
+                android:maxHeight="100dp"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+
+        tools:context=".fragments.RegistrationFragment">
+        <TextView
+            android:id="@+id/text_view_aadhar_number_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Aadhar Number:"
+            android:layout_weight="0.2"/>
+
+    <EditText
+        android:id="@+id/edit_text_aadhar_no"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Aadhar Number"
+        android:layout_weight="0.2"
+        android:maxLength="12"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:context=".fragments.RegistrationFragment">
+            <Button
+                android:id="@+id/choose_image_button_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Choose File"
+                android:layout_weight="0.15"/>
+            <ImageView
+                android:id="@+id/image_view_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:adjustViewBounds="true"
+                android:maxWidth="100dp"
+                android:maxHeight="100dp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_submit"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Submit"/>
+
+    </LinearLayout>
+</ScrollView>

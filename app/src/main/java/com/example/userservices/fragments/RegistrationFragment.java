@@ -211,37 +211,7 @@ public class RegistrationFragment extends Fragment implements LocationListener {
         LocationListener.super.onLocationChanged(locations);
     }
 
-//    private void getMobileNumber(String username) {
-//        final String BASE_URL = "https://api.trifrnd.in/services/eng/";
-//        Retrofit retrofit = new Retrofit.Builder()
-//                .baseUrl(BASE_URL)
-//                .addConverterFactory(GsonConverterFactory.create())
-//                .build();
-//        SignupApi signupApi = retrofit.create(SignupApi.class);
-//        Call<String> call = signupApi.getMobileNumber(username);
-//        call.enqueue(new Callback<String>() {
-//            @Override
-//            public void onResponse(@NonNull Call<String> call, @NonNull Response<String> response) {
-//                String responseBody = response.body();
-//                if (response.isSuccessful()) {
-//
-//                    assert responseBody != null;
-//                    if (responseBody.equals(phoneNumber)) {
-//                        signup1(mobile, FName, MName, LName, Address,City,state,
-//                                PAN_NO,Aadhar_No,status, created_location,Occupation);
-//                    }
-//                    else {
-//                        Toast.makeText(getContext(), "Mobile number does not match", Toast.LENGTH_LONG).show();
-//                    }
-//                }
-//            }
-//            @Override
-//            public void onFailure(@NonNull Call<String> call, @NonNull Throwable t) {
-//                Toast.makeText(getContext(), "Error: Failed to get mobile number", Toast.LENGTH_LONG).show();
-//                t.printStackTrace();
-//            }
-//        });
-//    }
+
     private void signup1(String mobile, String FName, String MName, String LName,
                          String Address,String City,String state,String PAN_NO,String Aadhar_No,
                          String Status,String created_location,String Occupation) {
@@ -264,8 +234,6 @@ public class RegistrationFragment extends Fragment implements LocationListener {
                     if (responseBody.equals("OK")) {
 
                         //call the method to change status of user from unregistered to registered
-
-
                         //updateStatus(username);
 
 
@@ -274,12 +242,12 @@ public class RegistrationFragment extends Fragment implements LocationListener {
                         startActivity(intent);
                         requireActivity().finish();
                     }
-                    else if (responseBody.equals("User already registered")) {
-                        Toast.makeText(getContext(), "User already registered", Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(getActivity(), LoginActivity.class);
-                        startActivity(intent);
-                        requireActivity().finish();
-                    }
+//                    else if (responseBody.equals("User already registered")) {
+//                        Toast.makeText(getContext(), "User already registered", Toast.LENGTH_LONG).show();
+//                        Intent intent = new Intent(getActivity(), LoginActivity.class);
+//                        startActivity(intent);
+//                        requireActivity().finish();
+//                    }
                 }
             }
             @Override
@@ -289,28 +257,7 @@ public class RegistrationFragment extends Fragment implements LocationListener {
             }
         });
     }
-//    private void updateStatus(String username) {
-//        final String BASE_URL = "https://services.trifrnd.in/api/usr/";
-//        Retrofit retrofit = new Retrofit.Builder()
-//                .baseUrl(BASE_URL)
-//                .addConverterFactory(GsonConverterFactory.create())
-//                .build();
-//        SignupApi signupApi = retrofit.create(SignupApi.class);
-//        Call<Void> call = signupApi.updateStatus(username);
-//        call.enqueue(new Callback<Void>() {
-//            @Override
-//            public void onResponse(@NonNull Call<Void> call, @NonNull Response<Void> response) {
-//
-//                if (response.isSuccessful()) {
-//                    Toast.makeText(getContext(), "Status successfully changed", Toast.LENGTH_LONG).show();
-//                }
-//            }
-//            @Override
-//            public void onFailure(@NonNull Call<Void> call, @NonNull Throwable t) {
-//                Toast.makeText(getContext(), "Error: Failed to change status", Toast.LENGTH_LONG).show();
-//            }
-//        });
-//    }
+
     @Override
     public void onFlushComplete(int requestCode) {
         LocationListener.super.onFlushComplete(requestCode);
